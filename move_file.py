@@ -15,10 +15,10 @@ for file_name in list_of_files:
         path2=to_dir+'/'+'arquivo_de_imagem'
         path3=to_dir+'/'+'arquivo_de_imagem'+'/'+file_name
 
-    if os.path.exists(path2):
-        print('movendo'+ file_name +'...')
-        shutil.move(path1,path3)
-    else:
-        os.makedirs(path2)
-        print('movendo'+ file_name +'...')
-        shutil.move(path1,path3)
+        if os.path.exists(path2):
+            print('movendo'+ file_name +'...')
+            shutil.move(path1,path3)
+        else:
+            os.makedirs(path2)
+            print('movendo'+ file_name +'...')
+            shutil.move(path1,path3)
